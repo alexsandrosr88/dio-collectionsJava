@@ -14,14 +14,14 @@ public class ListaTarefas {
         lista.add(new Tarefa(descricao));
     }
     public void removerTarefa(String descricao){
-        Tarefa tarefaR;
+        List<Tarefa> listRemove = new ArrayList<>();
+
         for(Tarefa tarefa : lista){
-                if(tarefa.getDescricao().equals(descricao)){
-                    tarefaR = tarefa;
-                    lista.remove(tarefaR);
-                    break;
+                if(tarefa.getDescricao().equalsIgnoreCase(descricao)){
+                    listRemove.add(tarefa);
                 }
         }
+        lista.removeAll(listRemove);
     }
     public int obterNumeroTotalTarefas(){
         return lista.size();
