@@ -41,4 +41,10 @@ public class SomaNumeros {
         }
         return menor;
     }
+
+    public void exibirNumeros(){
+        for (Integer numero : numeros){
+            System.out.println(numero);
+        }
+    }
 }
