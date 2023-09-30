@@ -1,21 +1,21 @@
-package listadetarefas;
+package atividade1;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListaTarefas {
-    List<listadetarefas.Tarefa> lista;
+    List<Tarefa> lista;
 
     public ListaTarefas() {
         lista = new ArrayList<>();
     }
 
     public void acionarTarefa(String descricao){
-        lista.add(new listadetarefas.Tarefa(descricao));
+        lista.add(new Tarefa(descricao));
     }
     public void removerTarefa(String descricao){
-        listadetarefas.Tarefa tarefaR;
-        for(listadetarefas.Tarefa tarefa : lista){
+        Tarefa tarefaR;
+        for(Tarefa tarefa : lista){
                 if(tarefa.getDescricao().equals(descricao)){
                     tarefaR = tarefa;
                     lista.remove(tarefaR);
@@ -28,7 +28,7 @@ public class ListaTarefas {
     }
 
     public void obterDescricoesTarefas(){
-        for (listadetarefas.Tarefa tarefa : lista){
+        for (Tarefa tarefa : lista){
             System.out.println(tarefa.getDescricao());
         }
     }

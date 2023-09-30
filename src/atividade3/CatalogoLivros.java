@@ -1,23 +1,23 @@
-package catalogoLivros;
+package atividade3;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CatalogoLivros {
-    private List<catalogoLivros.Livro> livros;
+    private List<Livro> livros;
 
     public CatalogoLivros() {
         livros = new ArrayList<>();
     }
 
     public void adicionarLivro(String titulo, String autor, int anoPublicacao){
-        livros.add(new catalogoLivros.Livro(titulo, autor, anoPublicacao));
+        livros.add(new Livro(titulo, autor, anoPublicacao));
     }
 
-    public List<catalogoLivros.Livro> pesquisarPorAutor(String autor){
-        List<catalogoLivros.Livro> list = new ArrayList<>();
+    public List<Livro> pesquisarPorAutor(String autor){
+        List<Livro> list = new ArrayList<>();
 
-        for (catalogoLivros.Livro livro : livros){
+        for (Livro livro : livros){
             if(livro.getAutor().equals(autor)){
                 list.add(livro);
             }
@@ -25,10 +25,10 @@ public class CatalogoLivros {
         return list;
     }
 
-    public List<catalogoLivros.Livro> pesquisarPorIntervaloAnos(int anoInicial, int anoFinal){
-        List<catalogoLivros.Livro> list = new ArrayList<>();
+    public List<Livro> pesquisarPorIntervaloAnos(int anoInicial, int anoFinal){
+        List<Livro> list = new ArrayList<>();
 
-        for (catalogoLivros.Livro livro : livros){
+        for (Livro livro : livros){
             if(livro.getAnoPublicacao() >= anoFinal && livro.getAnoPublicacao() <= anoFinal){
                 livros.add(livro);
             }
@@ -36,8 +36,8 @@ public class CatalogoLivros {
         return list;
     }
 
-    public catalogoLivros.Livro pesquisarPorTitulo(String titulo){
-        for(catalogoLivros.Livro livro : livros){
+    public Livro pesquisarPorTitulo(String titulo){
+        for(Livro livro : livros){
             if(livro.getTitulo().equals(titulo))
                 return livro;
         }

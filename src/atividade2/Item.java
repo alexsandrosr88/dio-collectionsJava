@@ -1,4 +1,4 @@
-package carrinhoCompras;
+package atividade2;
 
 public class Item {
     private String nome;
