@@ -6,8 +6,7 @@ public class ListaTarefas {
     List<Tarefa> lista;
 
     public void acionarTarefa(String descricao){
-        Tarefa tarefa = new Tarefa(descricao);
-        lista.add(tarefa);
+        lista.add(new Tarefa(descricao));
     }
     public void removerTarefa(String descricao){
         Tarefa tarefaR;
