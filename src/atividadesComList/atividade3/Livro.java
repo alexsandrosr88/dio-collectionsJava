@@ -1,4 +1,4 @@
-package atividade3;
+package atividadesComList.atividade3;
 
 public class Livro {
     private String titulo;

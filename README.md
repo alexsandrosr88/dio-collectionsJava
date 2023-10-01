@@ -1,73 +1,51 @@
-## Lista exercícios do curso Conhecendo Collections Java da Dio
+# Curso Conhecendo Collections Java
 
-### 1. Lista de Tarefas
-<p> Crie uma classe chamada "ListaTarefas" que possui uma lista de tarefas como atributo. Cada tarefa é representada por uma classe chamada "Tarefa" que possui um atributo de descrição. Implemente os seguintes métodos:
+- Uma coleção (collection) é uma estrutura de dados que serve para agrupar muitos elementos em uma única unidade, estes elementos precisão ser Objetos.
+- Uma Collection pode ter coleções homogêneas e heterogêneas, normalmente utilizamos coleções homogêneas de um tipo especifico.
+- O núcleo principal das coleções é formado pelas interfaces da figura a abaixo, essas interfaces permitem manipular a coleção independente do nível de detalhe que elas representam.
+- Temos quatro grandes tipos de coleções: `List` (lista), `Set` (conjunto), `Queue` (fila) e `Map` (mapa), a partir dessas interfaces, temos muitas subclasses concretas que implementam varias formas diferentes de se trabalhar com cada coleção.
 
-- `adicionarTarefa(String descricao)`: Adiciona uma nova tarefa à lista com a descrição fornecida.
-- `removerTarefa(String descricao)`: Remove uma tarefa da lista com base em sua descrição.
-- `obterNumeroTotalTarefas()`: Retorna o número total de tarefas na lista.
-- `obterDescricoesTarefas()`: Retorna uma lista contendo a descrição de todas as tarefas na lista.
+<p align="center">
+<img src="./assets/image/collection-framework.png"><br>
+<a href="https://data-flair.training/blogs/collection-framework-in-java/">Hierarchy of Collection Framework in Java </a>
 </p>
 
-### 2. Carrinho de Compras:
 
-<p>Crie uma classe chamada "CarrinhoDeCompras" que representa um carrinho de compras online. O carrinho deve ser implementado como uma lista de itens. Cada item é representado por uma classe chamada "Item" que possui atributos como nome, preço e quantidade. Implemente os seguintes métodos:
+- Todas as interfaces e classes são encontradas dentro do pacote (package) `java.util`.
+- Embora a interface `Map` não ser filha direta da interface `Collection` ela também é considerada uma coleção devido a sua função.
 
-- `adicionarItem(String nome, double preco, int quantidade)`: Adiciona um item ao carrinho com o nome, preço e quantidade especificados.
-- `removerItem(String nome)`: Remove um item do carrinho com base no seu nome.
-- `calcularValorTotal()`: Calcula e retorna o valor total do carrinho, levando em consideração o preço e a quantidade de cada item.
-- `exibirItens()`: Exibe todos os itens presentes no carrinho, mostrando seus nomes, preços e quantidades.
+<p align="center">
+<img src="./assets/image/collection-framework-methods.png" alt="List interface hierarchy Java"><br>
+<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html">Method Sumary Collection Interface</a>
 </p>
 
-----
 
-## Pesquisa em List
+---
 
-### 3. Catálogo de Livros
+### Referências:
 
-<p> Crie uma classe chamada "CatalogoLivros" que possui uma lista de objetos do tipo "Livro" como atributo. Cada livro possui atributos como título, autor e ano de publicação. Implemente os seguintes métodos:
+[1] "Java Collections - Universidade Java." Universidade Java. Disponível em: http://www.universidadejava.com.br/java/java-collection/.
 
-- `adicionarLivro(String titulo, String autor, int anoPublicacao)`: Adiciona um livro ao catálogo.
-- `pesquisarPorAutor(String autor)`: Pesquisa livros por autor e retorna uma lista com os livros encontrados.
-- `pesquisarPorIntervaloAnos(int anoInicial, int anoFinal)`: Pesquisa livros publicados em um determinado intervalo de anos e retorna uma lista com os livros encontrados.
-- `pesquisarPorTitulo(String titulo)`: Pesquisa livros por título e retorna o primeiro livro encontrado.
-</p>
+[2] "Java™ Platform, Standard Edition 17 API Specification - Interface Collection." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html.
 
-### 4. Soma de Números
+[3] "Java Comparator and Comparable - Baeldung." Baeldung. Disponível em: https://www.baeldung.com/java-comparator-comparable.
 
-<p>Crie uma classe chamada "SomaNumeros" que possui uma lista de números inteiros como atributo. Implemente os seguintes métodos:
+[4] "Java™ Platform, Standard Edition 17 API Specification - Class Collections." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html.
 
-- `adicionarNumero(int numero)`: Adiciona um número à lista de números.
-- `calcularSoma()`: Calcula a soma de todos os números na lista e retorna o resultado.
-- `encontrarMaiorNumero()`: Encontra o maior número na lista e retorna o valor.
-- `encontrarMenorNumero()`: Encontra o menor número na lista e retorna o valor.
-- `exibirNumeros()`: Retorna uma lista contendo todos os números presentes na lista.
+---
+Se você preferir usar o protocolo SSH para comunicação com o repositório, siga as etapas abaixo:
 
--------
+1. Abra o terminal ou prompt de comando.
 
-## Ordenação em List
+2. Navegue até o diretório do projeto.
 
-### 5. Ordenação de Pessoas
+3. Execute o seguinte comando para mudar a URL remota para SSH:
 
-<p>Crie uma classe chamada "OrdenacaoPessoas" que possui uma lista de objetos do tipo "Pessoa" como atributo. Cada pessoa possui atributos como nome, idade e altura. Implemente os seguintes métodos:
+   ```shell
+   git remote set-url origin git@github.com:cami-la/collections-java-api-2023.git
 
-- `adicionarPessoa(String nome, int idade, double altura)`: Adiciona uma pessoa à lista.
-- `ordenarPorIdade()`: Ordena as pessoas da lista por idade usando a interface Comparable.
-- `ordenarPorAltura()`: Ordena as pessoas da lista por altura usando um Comparator personalizado.
-</p>
-
-### 6. Ordenação de Números
-
-<p>Crie uma classe chamada "OrdenacaoNumeros" que possui uma lista de números inteiros como atributo. Implemente os seguintes métodos:
-
-- `adicionarNumero(int numero)`: Adiciona um número à lista.
-- `ordenarAscendente()`: Ordena os números da lista em ordem ascendente usando a interface Comparable e a class Collections.
-- `ordenarDescendente()`: Ordena os números da lista em ordem descendente usando um Comparable e a class Collections.
-</p>
-
-## Instrutora
+### Instrutora e idealizadora do material acima
 [Camila Cavalcante](https://github.com/cami-la)
 
-## Referência
+# Provedora do curso
 https://www.dio.me/
-

@@ -1,6 +1,4 @@
-package atividade5;
-
-import java.util.Comparator;
+package atividadesComList.atividade5;
 
 public class Pessoa implements Comparable<Pessoa> {
     private String nome;

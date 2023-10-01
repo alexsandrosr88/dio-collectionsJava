@@ -1,4 +1,4 @@
-package atividade5;
+package atividadesComList.atividade5;
 
 import java.util.ArrayList;
 import java.util.Collections;

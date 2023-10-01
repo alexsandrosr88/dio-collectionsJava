@@ -1,4 +1,4 @@
-package atividade2;
+package atividadesComList.atividade2;
 
 public class Item {
     private String nome;
