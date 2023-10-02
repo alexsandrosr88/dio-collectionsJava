@@ -25,7 +25,7 @@ public class AgendaContatos {
         Set<Contato> list = new HashSet<>();
 
         for (Contato c : agendaContatos){
-            if(c.getNome().equalsIgnoreCase(nome))
+            if(c.getNome().startsWith(nome))
                 list.add(c);
         }
         return list;

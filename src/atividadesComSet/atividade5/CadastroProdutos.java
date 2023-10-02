@@ -15,21 +15,14 @@ public class CadastroProdutos {
     }
 
     public void exibirProdutosPorNome(){
-        List<Produto> list = new ArrayList<>(listaProdutos);
-        Collections.sort(list);
-
-        for (Produto p : list){
-            System.out.println(p);
-        }
+       Set<Produto> list = new TreeSet<>(listaProdutos);
+        System.out.println(list);
     }
 
     public void exibirProdutosPorPreco(){
-        List<Produto> list = new ArrayList<>(listaProdutos);
-        list.sort(new ProdutoOrdenadoPorPreco());
-
-        for (Produto p : list){
-            System.out.println(p);
-        }
+        Set<Produto> list = new TreeSet<>(new ProdutoOrdenadoPorPreco());
+        list.addAll(listaProdutos);
+        System.out.println(list);
     }
     public static void main(String[] args){
         CadastroProdutos produtos = new CadastroProdutos();
