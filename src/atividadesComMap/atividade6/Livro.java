@@ -2,7 +2,7 @@ package atividadesComMap.atividade6;
 
 import java.util.Comparator;
 
-public class Livro implements Comparable<Livro> {
+public class Livro {
     private String titulo;
     private String autor;
     private double preco;
@@ -11,11 +11,6 @@ public class Livro implements Comparable<Livro> {
         this.titulo = titulo;
         this.autor = autor;
         this.preco = preco;
-    }
-
-    @Override
-    public int compareTo(Livro l) {
-        return Double.compare(preco, l.getPreco());
     }
 
     public String getAutor() {
