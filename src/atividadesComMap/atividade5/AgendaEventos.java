@@ -21,25 +21,27 @@ public class AgendaEventos {
         System.out.println(map);
     }
 
-    public Map<LocalDate,Evento> obterProximoEvento(){
-        LocalDate dataMaisRecente = LocalDate.EPOCH;
-        Map<LocalDate, Evento> eventoMaisProximo = new HashMap<>();
+    public void obterProximoEvento(){
+        LocalDate diaAtual = LocalDate.now();
 
-        for(Map.Entry<LocalDate, Evento> e : eventos.entrySet()){
-            if(e.getKey().isAfter(dataMaisRecente)){
-                dataMaisRecente = e.getKey();
-                eventoMaisProximo = Map.of(e.getKey(), e.getValue());
+        Map<LocalDate, Evento> eventoOrdenadoPorData = new TreeMap<>(eventos);
+
+        for(Map.Entry<LocalDate, Evento> e : eventoOrdenadoPorData.entrySet()){
+
+            if(e.getKey().isEqual(diaAtual) || e.getKey().isAfter(diaAtual)){
+                System.out.println("O próximo evento: "+ e.getValue() + " acontecerá na data "+ e.getKey());
+                break;
             }
         }
-
-        return eventoMaisProximo;
     }
     public static void main(String[] args){
         AgendaEventos agenda = new AgendaEventos();
-        agenda.adicionarEvento(LocalDate.of(2023,10,3),"Evento1","Teste1");
-        agenda.adicionarEvento(LocalDate.of(2023,7,2),"Evento2","Teste2");
-        agenda.adicionarEvento(LocalDate.of(2023,8,14),"Evento3","Teste3");
-        agenda.adicionarEvento(LocalDate.of(2023,1,1),"Evento4","Teste4");
+        agenda.adicionarEvento(LocalDate.of(2023,10,3),"Evento1","Atração1");
+        agenda.adicionarEvento(LocalDate.of(2023,7,2),"Evento2","Atração2");
+        agenda.adicionarEvento(LocalDate.of(2023,8,14),"Evento3","Atração3");
+        agenda.adicionarEvento(LocalDate.of(2023,1,1),"Evento4","Atração4");
+        agenda.adicionarEvento(LocalDate.of(2023,12,12),"Evento5","Atração5");
+        agenda.adicionarEvento(LocalDate.of(2023,10,30),"Evento6","Atração6");
 
         System.out.println();
 
@@ -48,6 +50,6 @@ public class AgendaEventos {
         System.out.println("\n-------------------------\n");
 
         System.out.println("Evento com data mais próxima:");
-        System.out.println(agenda.obterProximoEvento());
+        agenda.obterProximoEvento();
     }
 }

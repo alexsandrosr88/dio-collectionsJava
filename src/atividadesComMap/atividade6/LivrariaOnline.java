@@ -1,8 +1,6 @@
 package atividadesComMap.atividade6;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class LivrariaOnline {
     private Map<String, Livro> livros;
@@ -23,6 +21,7 @@ public class LivrariaOnline {
 
     public void exibirLivrosOrdenadosPorPreco(){
         Map<String, Livro> mapOrdenado = new TreeMap<>(livros);
+
         System.out.println(mapOrdenado);
     }
 
